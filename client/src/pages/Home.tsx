@@ -103,13 +103,13 @@ export default function Home() {
               custom={3}
               className="flex flex-wrap gap-3"
             >
-              <Link href="/compare">
+              <Link href="#/compare">
                 <Button size="lg" className="bg-[oklch(0.72_0.14_75)] hover:bg-[oklch(0.65_0.14_75)] text-[oklch(0.18_0.04_50)] font-semibold gap-2 shadow-lg">
                   เปรียบเทียบพืชเลย
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-              <Link href="/calculator">
+              <Link href="#/calculator">
                 <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 bg-transparent gap-2">
                   <Calculator className="w-4 h-4" />
                   คำนวณผลตอบแทน
@@ -235,7 +235,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-8">
-                <Link href="/compare">
+                <Link href="#/compare">
                   <Button className="bg-primary text-primary-foreground gap-2">
                     ดูการเปรียบเทียบเต็ม
                     <ArrowRight className="w-4 h-4" />
@@ -252,7 +252,7 @@ export default function Home() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663435995365/jNZECRnRB9i5YJLDzEEGai/calculator-bg-5WR7ePeiWYcNPDeZQQBsMx.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663435995365/jNZECRnRB9i5YJLDzEEGai#/calculator-bg-5WR7ePeiWYcNPDeZQQBsMx.webp"
                   alt="เกษตรกรถือต้นอ้อย"
                   className="w-full h-80 object-cover"
                 />
@@ -354,13 +354,13 @@ export default function Home() {
               ใช้เครื่องมือของเราฟรี ไม่ต้องสมัครสมาชิก เพื่อวางแผนการปลูกที่ดีที่สุด
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/compare">
+              <Link href="#/compare">
                 <Button size="lg" className="bg-[oklch(0.72_0.14_75)] hover:bg-[oklch(0.65_0.14_75)] text-[oklch(0.18_0.04_50)] font-semibold gap-2">
                   เริ่มเปรียบเทียบพืช
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-              <Link href="/calculator">
+              <Link href="#/calculator">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent">
                   คำนวณผลตอบแทน
                 </Button>
