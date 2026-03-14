@@ -38,7 +38,7 @@ function App() {
         <CropProvider>
           <TooltipProvider>
             <Toaster richColors position="top-right" />
-            <WouterRouter basename="/sugarcane-advisor">
+            <WouterRouter base={import.meta.env.BASE_URL}>
               <AppRoutes />
             </WouterRouter>
           </TooltipProvider>
