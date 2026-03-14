@@ -3,7 +3,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { CropProvider } from "./contexts/CropContext";
@@ -14,7 +14,7 @@ import CalculatorPage from "./pages/Calculator";
 import Trends from "./pages/Trends";
 import Guide from "./pages/Guide";
 
-function Router() {
+function AppRoutes() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -38,7 +38,9 @@ function App() {
         <CropProvider>
           <TooltipProvider>
             <Toaster richColors position="top-right" />
-            <Router />
+            <WouterRouter basename="/sugarcane-advisor">
+              <AppRoutes />
+            </WouterRouter>
           </TooltipProvider>
         </CropProvider>
       </ThemeProvider>

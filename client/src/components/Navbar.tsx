@@ -7,11 +7,11 @@ import { Menu, X, TrendingUp, Calculator, BarChart3, BookOpen, Home } from 'luci
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { href: '#/', label: 'หน้าหลัก', icon: Home },
-  { href: '#/compare', label: 'เปรียบเทียบพืช', icon: BarChart3 },
-  { href: '#/calculator', label: 'คำนวณผลตอบแทน', icon: Calculator },
-  { href: '#/trends', label: 'แนวโน้มราคา', icon: TrendingUp },
-  { href: '#/guide', label: 'คู่มือการปลูก', icon: BookOpen },
+  { href: '/', label: 'หน้าหลัก', icon: Home },
+  { href: '/compare', label: 'เปรียบเทียบพืช', icon: BarChart3 },
+  { href: '/calculator', label: 'คำนวณผลตอบแทน', icon: Calculator },
+  { href: '/trends', label: 'แนวโน้มราคา', icon: TrendingUp },
+  { href: '/guide', label: 'คู่มือการปลูก', icon: BookOpen },
 ];
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="#/">
+          <Link href="/">
             <div className="flex items-center gap-2.5 group cursor-pointer">
               <div className="w-9 h-9 rounded-xl overflow-hidden bg-white/10 flex items-center justify-center">
                 <img
