@@ -1,0 +1,175 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* 
+ * Design System: Modern Agri-Tech Dashboard
+ * Primary: สีเขียวอ้อย (#2D6A4F) — ความอุดมสมบูรณ์
+ * Secondary: สีน้ำตาลดิน (#8B5E3C) — ความมั่นคง
+ * Accent: สีทองข้าว (#D4A017) — ความมั่งคั่ง
+ * Background: ครีมอ่อน (#FFFBF0) — ความอบอุ่น
+ * Typography: Prompt (headings), Sarabun (body)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Agri-Tech Green Theme */
+  --primary: oklch(0.38 0.12 155);           /* #2D6A4F เขียวอ้อย */
+  --primary-foreground: oklch(0.98 0.01 90); /* ขาวครีม */
+  --secondary: oklch(0.92 0.03 90);          /* ครีมอ่อน */
+  --secondary-foreground: oklch(0.30 0.05 155);
+  --accent: oklch(0.72 0.14 75);             /* ทองข้าว */
+  --accent-foreground: oklch(0.20 0.05 50);  /* น้ำตาลเข้ม */
+  --muted: oklch(0.95 0.02 90);
+  --muted-foreground: oklch(0.50 0.04 155);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.03 120);
+  --input: oklch(0.90 0.02 90);
+  --ring: oklch(0.38 0.12 155);
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.01 90);         /* ครีมอ่อน */
+  --foreground: oklch(0.18 0.04 155);        /* เขียวเข้มมาก */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 155);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 155);
+  /* Chart colors for crops */
+  --chart-1: oklch(0.45 0.15 155);  /* อ้อย: เขียว */
+  --chart-2: oklch(0.75 0.15 85);   /* ข้าว: ทอง */
+  --chart-3: oklch(0.68 0.18 55);   /* ข้าวโพด: ส้ม */
+  --chart-4: oklch(0.55 0.12 40);   /* มัน: น้ำตาล */
+  --chart-5: oklch(0.55 0.18 270);  /* พืชอื่น: ม่วง */
+  --sidebar: oklch(0.22 0.06 155);
+  --sidebar-foreground: oklch(0.95 0.02 90);
+  --sidebar-primary: oklch(0.72 0.14 75);
+  --sidebar-primary-foreground: oklch(0.18 0.04 50);
+  --sidebar-accent: oklch(0.30 0.08 155);
+  --sidebar-accent-foreground: oklch(0.95 0.02 90);
+  --sidebar-border: oklch(0.30 0.06 155);
+  --sidebar-ring: oklch(0.72 0.14 75);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Sarabun', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Prompt', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1400px;
+    }
+  }
+
+  /* Crop color badges */
+  .crop-sugarcane { background-color: oklch(0.45 0.15 155); color: white; }
+  .crop-rice { background-color: oklch(0.65 0.15 85); color: oklch(0.18 0.04 50); }
+  .crop-corn { background-color: oklch(0.68 0.18 55); color: white; }
+  .crop-cassava { background-color: oklch(0.55 0.12 40); color: white; }
+  .crop-custom { background-color: oklch(0.55 0.18 270); color: white; }
+
+  /* Gradient text */
+  .text-gradient-green {
+    background: linear-gradient(135deg, oklch(0.38 0.12 155), oklch(0.55 0.15 155));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px oklch(0.38 0.12 155 / 0.15);
+  }
+
+  /* Section divider */
+  .section-divider {
+    height: 4px;
+    background: linear-gradient(90deg, oklch(0.38 0.12 155), oklch(0.72 0.14 75), transparent);
+    border-radius: 2px;
+  }
+}
