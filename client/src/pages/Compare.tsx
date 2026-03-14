@@ -498,7 +498,7 @@ export default function Compare() {
                         { label: 'กำไรสุทธิ/ไร่ (บาท)', key: 'netProfitPerRai', format: (v: number) => (v >= 0 ? '+' : '') + v.toLocaleString(), highlight: true },
                         { label: 'ROI (%)', key: 'roi', format: (v: number) => `${v}%`, highlight: true },
                         { label: 'ระยะเวลาปลูก (เดือน)', key: 'growthMonths', format: (v: number) => `${v} เดือน` },
-                        { label: 'ความยากในการดูแล (ยิ่งยาก = หลายกว่า)', key: 'difficulty', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
+                        { label: 'ความยากในการดูแล (1 = ง่าย, 5 = ยาก)', key: 'difficulty', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
                         { label: 'ความต้องการตลาด', key: 'marketDemand', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
                         { label: 'ทนแห้ง (ยิ่งมาก = ทนได้ดี)', key: 'droughtResistance', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
                         { label: 'ทนน้ำท่วม', key: 'floodResistance', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
