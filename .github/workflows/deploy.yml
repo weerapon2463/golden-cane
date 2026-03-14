@@ -1,11 +1,8 @@
-name: build-and-deploy
+name: Deploy Vite site to Pages
 
 on:
   push:
-    branches: [main]
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -25,13 +22,14 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/deploy-pages@v4
