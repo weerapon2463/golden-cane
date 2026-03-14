@@ -19,9 +19,8 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm install -g pnpm
-      - run: pnpm install --no-frozen-lockfile
-      - run: pnpm build
+      - run: npm install
+      - run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
