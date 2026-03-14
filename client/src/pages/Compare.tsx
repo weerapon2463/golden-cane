@@ -492,7 +492,7 @@ export default function Compare() {
                         { label: 'รยหลักเก็บเกี่ยว/ปี', key: 'harvestsPerYear', format: (v: number) => `${v} ครั้ง` },
                         { label: 'ระยะเวลาเก็บครั้งแรก', key: 'firstHarvestMonths', format: (v: number) => `${v} เดือน` },
                         { label: 'เก็บตอได้หรือไม่', key: 'canRatoon', format: (v: boolean) => v ? 'ได้' : 'ไม่ได้' },
-                        { label: 'จำนวนปี ratoon', key: 'ratoonYears', format: (v: number) => v > 0 ? `${v} ปี` : 'ไม่มี' },
+                        { label: 'จำนวนปีที่เก็บตอได้', key: 'ratoonYears', format: (v: number) => v > 0 ? `${v} ปี` : 'ไม่มี' },
                         { label: 'รายได้/ไร่ (บาท)', key: 'revenuePerRai', format: (v: number) => v.toLocaleString(), highlight: true },
                         { label: 'ต้นทุนรวม/ไร่ (บาท)', key: 'totalCost', format: (v: number) => v.toLocaleString() },
                         { label: 'กำไรสุทธิ/ไร่ (บาท)', key: 'netProfitPerRai', format: (v: number) => (v >= 0 ? '+' : '') + v.toLocaleString(), highlight: true },
@@ -571,7 +571,7 @@ export default function Compare() {
                         <span className="font-medium">พื้นที่เหมาะสม:</span> {crop.bestRegions.join(', ')}
                       </p>
                       <div className="bg-muted/30 rounded-lg p-2">
-                        <p className="text-xs font-semibold text-foreground mb-1">เก็บเกี่ยว & Ratoon</p>
+                        <p className="text-xs font-semibold text-foreground mb-1">เก็บเกี่ยว & เก็บตอ</p>
                         <p className="text-xs text-foreground leading-relaxed">{crop.ratoonInfo}</p>
                       </div>
                     </div>
