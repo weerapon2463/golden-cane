@@ -489,7 +489,7 @@ export default function Compare() {
                       {[
                         { label: 'ผลผลิต (ตัน/ไร่)', key: 'yieldPerRai', format: (v: number) => v.toFixed(1) },
                         { label: 'ราคา (บาท/ตัน)', key: 'pricePerTon', format: (v: number) => v.toLocaleString() },
-                        { label: 'รยหลักเก็บเกี่ยว/ปี', key: 'harvestsPerYear', format: (v: number) => `${v} ครั้ง` },
+                        { label: 'จำนวนครั้งเก็บเกี่ยว/ปี', key: 'harvestsPerYear', format: (v: number) => `${v} ครั้ง` },
                         { label: 'ระยะเวลาเก็บครั้งแรก', key: 'firstHarvestMonths', format: (v: number) => `${v} เดือน` },
                         { label: 'เก็บตอได้หรือไม่', key: 'canRatoon', format: (v: boolean) => v ? 'ได้' : 'ไม่ได้' },
                         { label: 'จำนวนปีที่เก็บตอได้', key: 'ratoonYears', format: (v: number) => v > 0 ? `${v} ปี` : 'ไม่มี' },
@@ -500,9 +500,9 @@ export default function Compare() {
                         { label: 'ระยะเวลาปลูก (เดือน)', key: 'growthMonths', format: (v: number) => `${v} เดือน` },
                         { label: 'ความยากในการดูแล (ยิ่งยาก = หลายกว่า)', key: 'difficulty', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
                         { label: 'ความต้องการตลาด', key: 'marketDemand', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
-                        { label: 'ทนแล้ง (ยิ่งยิ่ง = ทนได้ดี)', key: 'droughtResistance', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
+                        { label: 'ทนแห้ง (ยิ่งมาก = ทนได้ดี)', key: 'droughtResistance', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
                         { label: 'ทนน้ำท่วม', key: 'floodResistance', format: (v: number) => '★'.repeat(v) + ' / ' + '☆'.repeat(5 - v) },
-                        { label: 'ฟินเก็บเกี่ยว', key: 'harvestSeason', format: (v: string) => v },
+                        { label: 'ฤดูเก็บเกี่ยว', key: 'harvestSeason', format: (v: string) => v },
                       ].map(({ label, key, format, highlight }) => {
                         const values = crops.map(c => c[key as keyof typeof c] as number);
                         const maxVal = typeof values[0] === 'number' ? Math.max(...values as number[]) : null;
