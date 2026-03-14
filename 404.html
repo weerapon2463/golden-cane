@@ -6,14 +6,12 @@
     <title>อ้อยทอง - ที่ปรึกษาเกษตรกรรายใหม่</title>
     <meta name="description" content="เปรียบเทียบผลตอบแทนการปลูกพืช อ้อย ข้าว ข้าวโพด มันสำปะหลัง พร้อมเครื่องคำนวณกำไรและกราฟวิเคราะห์เชิงลึก" />
     <script>
-      // Handle SPA redirect from 404
-      (function() {
-        var params = new URLSearchParams(window.location.search);
-        var p = params.get('p');
-        if (p) {
-          window.location.href = '/' + p;
-        }
-      })();
+      // SPA redirect from 404
+      var params = new URLSearchParams(window.location.search);
+      var p = params.get('p');
+      if (p) {
+        window.location.href = '/' + p;
+      }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
